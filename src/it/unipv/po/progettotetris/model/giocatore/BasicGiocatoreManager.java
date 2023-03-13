@@ -35,4 +35,12 @@ public class BasicGiocatoreManager implements GiocatoreManager {
         }
         return g.getPassword().equals(password);
     }
+
+    @Override
+    public Giocatore getGiocatoreByID(String ID) {
+        for( Giocatore g : giocatori){
+            if(g.getID().equals(ID)) return g;
+        }
+        return null;
+    }
 }

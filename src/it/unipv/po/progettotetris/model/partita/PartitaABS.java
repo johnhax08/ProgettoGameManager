@@ -41,4 +41,15 @@ public abstract class PartitaABS implements Partita {
     public TipoPartita getTipo() {
         return tipo;
     }
+
+    @Override
+    public String toString() {
+        return "PartitaABS{" +
+                "timeStamp=" + timeStamp +
+                ", giocatore1=" + giocatore1 +
+                ", giocatore2=" + giocatore2 +
+                ", vincitore=" + vincitore +
+                ", tipo=" + tipo +
+                '}';
+    }
 }

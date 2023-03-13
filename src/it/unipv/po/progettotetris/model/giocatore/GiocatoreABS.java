@@ -57,4 +57,9 @@ public abstract class GiocatoreABS implements  Giocatore{
     public TipiGiocatore getTipo() {
         return tipo;
     }
+
+    @Override
+    public String toString() {
+        return ID;
+    }
 }
