@@ -1,6 +1,8 @@
 package it.unipv.po.progettotetris.model.giocatore;
 
-public interface Giocatore {
+import it.unipv.po.progettotetris.model.persistenza.Serializzabile;
+
+public interface Giocatore extends Serializzabile {
     String getID();
     String getNome();
     String getPassword();

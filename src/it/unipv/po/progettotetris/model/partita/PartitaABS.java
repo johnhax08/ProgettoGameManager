@@ -3,11 +3,11 @@ package it.unipv.po.progettotetris.model.partita;
 import it.unipv.po.progettotetris.model.giocatore.Giocatore;
 
 public abstract class PartitaABS implements Partita {
-    long timeStamp;
-    Giocatore giocatore1;
-    Giocatore giocatore2;
-    Giocatore vincitore;
-    TipoPartita tipo;
+    final protected long timeStamp;
+    final protected Giocatore giocatore1;
+    final protected Giocatore giocatore2;
+    final protected Giocatore vincitore;
+    final protected TipoPartita tipo;
 
     public PartitaABS(long timeStamp, Giocatore giocatore1, Giocatore giocatore2, Giocatore vincitore, TipoPartita tipo) {
         this.timeStamp = timeStamp;
@@ -40,6 +40,11 @@ public abstract class PartitaABS implements Partita {
     @Override
     public TipoPartita getTipo() {
         return tipo;
+    }
+
+    @Override
+    public String getID() {
+        return timeStamp + giocatore1.getID() + giocatore2.getID() + vincitore.getID();
     }
 
     @Override

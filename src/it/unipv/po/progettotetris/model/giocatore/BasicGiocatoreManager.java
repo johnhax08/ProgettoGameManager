@@ -1,18 +1,42 @@
 package it.unipv.po.progettotetris.model.giocatore;
 
+import it.unipv.po.progettotetris.model.persistenza.Serializzabile;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BasicGiocatoreManager implements GiocatoreManager {
+    final String GIOCATORIPATH = "data_progettotetris/giocatori/"  ;
     protected List<Giocatore> giocatori;
 
     public BasicGiocatoreManager() {
         this.giocatori = new ArrayList<>();
+        for(File f : new File(GIOCATORIPATH).listFiles() ) {
+            try {
+                Giocatore g = (Giocatore) Serializzabile.read(f.getPath());
+                addGiocatore(g);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
     public void addGiocatore(Giocatore g) {
         giocatori.add(g);
+        try {
+            String path = GIOCATORIPATH + g.getID() ;
+           // System.out.println(path);
+            g.write(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+
     }
 
     @Override

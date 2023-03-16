@@ -1,19 +1,45 @@
 package it.unipv.po.progettotetris.model.partita;
 
+import it.unipv.po.progettotetris.model.persistenza.Serializzabile;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class BasicPartitaManager implements  PartitaManager{
     protected List<Partita> partite;
+    final String PARTITAPATH = "data_progettotetris/partite/" ;
 
     public BasicPartitaManager() {
         this.partite = new ArrayList<>();
+
+        for(File f : new File(PARTITAPATH).listFiles()){
+         try {
+                Partita p = (Partita) Serializzabile.read(f.getPath());
+                addPartita(p);
+            } catch (IOException e) {
+               e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+        }
+
     }
 
     @Override
-    public void addPartita(Partita p) {
+    public void addPartita(Partita p) { //quando aggiungo una partita viene salvata automaticamente sul disco
         partite.add(p);
+        String path = PARTITAPATH + p.getID();
+        try {
+            p.write(path);
+        } catch (IOException e){
+            e.printStackTrace(); //ho preferito di non lanciare l'eccezione e quindi ho usato print stack trace che stampa lo stack trace dell'eccezione cioè tutto quello che è andato storto.
+        }
+
+
     }
 
     @Override
@@ -21,12 +47,14 @@ public class BasicPartitaManager implements  PartitaManager{
         partite.remove(p);
     }
 
+
+
     @Override
     public List<Partita> filtro(Long timestamp, String g1, String g2, String vincitore) {
         return  partite.stream().filter(p ->
                 (timestamp == null || p.getTimeStamp() == timestamp) //visto che timestamp è un long cioè un primitivo non posso usare null ma faccio timestamp < 0
-                && (g1 == null || p.getGiocatore1().getID().equals(g1) )
-                && (g2 == null || p.getGiocatore2().getID().equals(g2) )
+                && (g1 == null || p.getGiocatore1().getID().equals(g1))
+                && (g2 == null || p.getGiocatore2().getID().equals(g2))
                 && (vincitore == null || p.getVincitore().getID().equals(vincitore)) )
                 .collect(Collectors.toList()); //collect per mettere tutti gli elementi in una lista
         //prendo la lista di partite, ci applico un filtro, questo filtro mi ritorna una nuova lista che non ha nulla a che fare con quella vecchia però è una lista nuova che contiene gli elementi desiderati
