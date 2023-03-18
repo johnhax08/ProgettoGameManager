@@ -1,14 +1,12 @@
 package it.unipv.po.progettotetris.model.giocatore;
 //in questa classe metto tutta la roba in comune cioè in giocatoreABS.
 public abstract class GiocatoreABS implements  Giocatore{
-    String ID;
     String nome;
     String password;
     int punteggioTotale;
     TipiGiocatore tipo;
 
-    public GiocatoreABS(String ID, String nome, String password, int punteggioTotale,TipiGiocatore tipo) {
-        this.ID = ID;
+    public GiocatoreABS(String nome, String password, int punteggioTotale,TipiGiocatore tipo) {
         this.nome = nome;
         this.password = password;
         this.punteggioTotale = punteggioTotale;
@@ -20,7 +18,7 @@ public abstract class GiocatoreABS implements  Giocatore{
         Giocatore g = (Giocatore) obj;
         try {
             Giocatore other = (Giocatore) obj;
-            return this.getID() == other.getID();
+            return this.getNome().equals(other.getNome());
         }
         catch (ClassCastException e)
         {
@@ -33,10 +31,6 @@ public abstract class GiocatoreABS implements  Giocatore{
         punteggioTotale += delta;
     }
 
-    @Override
-    public String getID() {
-        return ID;
-    }
 
     @Override
     public String getNome() {
@@ -60,6 +54,6 @@ public abstract class GiocatoreABS implements  Giocatore{
 
     @Override
     public String toString() {
-        return ID;
+        return nome;
     }
 }

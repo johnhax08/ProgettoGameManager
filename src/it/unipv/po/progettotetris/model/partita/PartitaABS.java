@@ -44,7 +44,7 @@ public abstract class PartitaABS implements Partita {
 
     @Override
     public String getID() {
-        return timeStamp + giocatore1.getID() + giocatore2.getID() + vincitore.getID();
+        return timeStamp + giocatore1.getNome() + giocatore2.getNome() + vincitore.getNome();
     }
 
     @Override

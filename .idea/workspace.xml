@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="testFiltro">
-      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/persistenza/Serializzabile.java" afterDir="false" />
+    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="persistenza">
+      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/FramePrincipale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/LogInPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/SignUpPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/TitoloFinestra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/BasicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/BasicGiocatoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/BasicGiocatoreManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/Giocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreABS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreABS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreBegginner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreBegginner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreProfessional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/giocatore/GiocatoreProfessional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/partita/BasicPartitaManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/partita/BasicPartitaManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/partita/Partita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/partita/PartitaABS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/partita/PartitaABS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -70,12 +79,20 @@
       <option name="project" value="LOCAL" />
       <updated>1678703514163</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="persistenza">
+      <created>1678953820424</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678953820424</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="firstcode" />
     <MESSAGE value="testFiltro" />
-    <option name="LAST_COMMIT_MESSAGE" value="testFiltro" />
+    <MESSAGE value="persistenza" />
+    <option name="LAST_COMMIT_MESSAGE" value="persistenza" />
   </component>
 </project>

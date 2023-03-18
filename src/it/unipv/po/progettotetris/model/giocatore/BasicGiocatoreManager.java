@@ -29,7 +29,7 @@ public class BasicGiocatoreManager implements GiocatoreManager {
     public void addGiocatore(Giocatore g) {
         giocatori.add(g);
         try {
-            String path = GIOCATORIPATH + g.getID() ;
+            String path = GIOCATORIPATH + g.getNome() ;
            // System.out.println(path);
             g.write(path);
         } catch (IOException e) {
@@ -45,11 +45,11 @@ public class BasicGiocatoreManager implements GiocatoreManager {
     }
 
     @Override
-    public boolean authenticate(String ID, String password) {
+    public boolean authenticate(String nome, String password) {
         Giocatore g = null;
         for (Giocatore g1 : giocatori) //per ciascun g1 in giocatori
         {
-            if (g1.getID().equals(ID)) { //uso equals perchè sto confrontado due stringhe, quando confronto il valore logico di due oggeti uso l'equals mentre quando confronto due tipi primitivi posso usare ==, che è anche l'unica opzione
+            if (g1.getNome().equals(nome)) { //uso equals perchè sto confrontado due stringhe, quando confronto il valore logico di due oggeti uso l'equals mentre quando confronto due tipi primitivi posso usare ==, che è anche l'unica opzione
                 g = g1;
                 break;
             }
@@ -61,9 +61,9 @@ public class BasicGiocatoreManager implements GiocatoreManager {
     }
 
     @Override
-    public Giocatore getGiocatoreByID(String ID) {
+    public Giocatore getGiocatoreByID(String nome) {
         for( Giocatore g : giocatori){
-            if(g.getID().equals(ID)) return g;
+            if(g.getNome().equals(nome)) return g;
         }
         return null;
     }
