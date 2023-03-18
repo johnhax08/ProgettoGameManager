@@ -13,6 +13,7 @@ public class BasicController implements Controller {
     protected GiocatoreManager gm;
     protected List <Listener> elencoListeners;
     protected TitoloFinestra paginaAttuale;
+    protected String giocatoreAttuale;
 
     public BasicController() {
         pm = PartitaManager.getPartitaManager();
@@ -70,5 +71,16 @@ public class BasicController implements Controller {
         for(Listener listener : elencoListeners){
             listener.switchTo(titolo);
         }
+    }
+
+    @Override
+    public void setGiocatoreAttuale(String nome) {
+        this.giocatoreAttuale = nome;
+    }
+
+    @Override
+    public Giocatore getGiocatoreAttuale() {
+        return getGiocatoreByID(giocatoreAttuale);
+
     }
 }

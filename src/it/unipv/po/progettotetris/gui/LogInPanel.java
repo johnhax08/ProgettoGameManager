@@ -1,6 +1,7 @@
 package it.unipv.po.progettotetris.gui;
 
 import it.unipv.po.progettotetris.model.facade.Controller;
+import it.unipv.po.progettotetris.model.facade.TitoloFinestra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,11 +25,15 @@ public class LogInPanel extends JPanel {
         add(password);
         add(login);
 
+
+
         this.login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(controller.authenticate(username.getText(), password.getText())){
                     JOptionPane.showMessageDialog(null,"Log In è stato effettuato con successo!");
+                    controller.setGiocatoreAttuale(username.getText());
+                    controller.switchTo(TitoloFinestra.GIOCA_ORA);
                 }
                 else{
                     JOptionPane.showMessageDialog(null,"Log In non riuscito!");
@@ -36,6 +41,7 @@ public class LogInPanel extends JPanel {
 
             }
         });
+
 
 
     }

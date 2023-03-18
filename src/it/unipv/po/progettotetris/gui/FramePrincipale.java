@@ -12,12 +12,14 @@ public class FramePrincipale extends JFrame implements Listener {
     String titolo;
     Controller controller;
     LogInPanel loginpanel;
+    GiocaPanel giocaPanel;
 
     public FramePrincipale(Controller controller){
         this.signUpPanel = new SignUpPanel(controller);
         this.titolo = "SIGN UP";
         this.controller = controller;
         this.loginpanel = new LogInPanel(controller);
+        this.giocaPanel = new GiocaPanel(controller);
         add(signUpPanel);
 
 
@@ -37,19 +39,21 @@ public class FramePrincipale extends JFrame implements Listener {
 
     @Override
     public void switchTo(TitoloFinestra titolo) {
-        System.out.println(titolo + " Frame Principale ");
         this.getContentPane().removeAll();
-        //setLayout(new GridLayout(1,1));
         switch (titolo){
             case LOG_IN :
 
                 add(loginpanel);
-                System.out.println(" ok sono al login ");
                 break;
             case SIGN_UP :
 
                 add(signUpPanel);
                 break;
+
+            case GIOCA_ORA :
+                add(giocaPanel);
+                break;
+
         }
         this.repaint();
         this.revalidate();
