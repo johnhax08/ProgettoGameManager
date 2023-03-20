@@ -31,7 +31,7 @@ public class GiocaPanel extends JPanel {
                 boolean vinceg1 = new Random().nextBoolean();
                 Giocatore g1 = controller.getGiocatoreAttuale();
                 Giocatore g2 = controller.getGiocatoreByID(nome.getText());
-                Giocatore v = vinceg1?g1 : g2; // : = sennò
+                Giocatore v = vinceg1?g1 : g2;  // : = sennò
 
                 PartitaParitaria partitaParitaria = new PartitaParitaria(0,g1,g2,v);
                 controller.addPartita(partitaParitaria);

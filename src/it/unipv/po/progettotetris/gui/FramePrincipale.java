@@ -9,18 +9,18 @@ import java.awt.*;
 
 public class FramePrincipale extends JFrame implements Listener {
     SignUpPanel signUpPanel;
-    String titolo;
     Controller controller;
     LogInPanel loginpanel;
     GiocaPanel giocaPanel;
+    MainMenu mainMenu;
 
     public FramePrincipale(Controller controller){
         this.signUpPanel = new SignUpPanel(controller);
-        this.titolo = "SIGN UP";
         this.controller = controller;
         this.loginpanel = new LogInPanel(controller);
         this.giocaPanel = new GiocaPanel(controller);
-        add(signUpPanel);
+        this.mainMenu = new MainMenu(controller);
+        add(mainMenu);
 
 
         setLayout(new GridLayout(1,1));
@@ -28,7 +28,7 @@ public class FramePrincipale extends JFrame implements Listener {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        setTitle(titolo);
+        setTitle("Menù Principale");
         controller.addListener(this);
     }
 
@@ -39,18 +39,21 @@ public class FramePrincipale extends JFrame implements Listener {
 
     @Override
     public void switchTo(TitoloFinestra titolo) {
+
         this.getContentPane().removeAll();
         switch (titolo){
             case LOG_IN :
-
+                setTitle("LOG IN");
                 add(loginpanel);
                 break;
-            case SIGN_UP :
 
+            case SIGN_UP :
+                setTitle("SIGN UP");
                 add(signUpPanel);
                 break;
 
             case GIOCA_ORA :
+                setTitle("GIOCA ORA");
                 add(giocaPanel);
                 break;
 

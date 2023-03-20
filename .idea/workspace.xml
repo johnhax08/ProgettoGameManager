@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="rimozione id">
-      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/GiocaPanel.java" afterDir="false" />
+    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="ADD GiocaPanel">
+      <change afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/FramePrincipale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/FramePrincipale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/LogInPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/LogInPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/BasicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/model/facade/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/GiocaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/GiocaPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679134076495</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ADD GiocaPanel">
+      <created>1679138836552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679138836552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -90,6 +95,22 @@
     <MESSAGE value="testFiltro" />
     <MESSAGE value="persistenza" />
     <MESSAGE value="rimozione id" />
-    <option name="LAST_COMMIT_MESSAGE" value="rimozione id" />
+    <MESSAGE value="ADD GiocaPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD GiocaPanel" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/it/unipv/po/progettotetris/gui/GiocaPanel.java</url>
+          <line>18</line>
+          <properties class="it.unipv.po.progettotetris.gui.GiocaPanel" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
