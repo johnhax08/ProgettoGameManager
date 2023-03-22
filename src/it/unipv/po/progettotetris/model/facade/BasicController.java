@@ -50,8 +50,8 @@ public class BasicController implements Controller {
     }
 
     @Override
-    public List<Partita> filtro(Long timestamp, String g1, String g2, String vincitore) {
-        return pm.filtro(timestamp,g1,g2,vincitore);
+    public List<Partita> filtro(Long timestamp, String g, String vincitore) {
+        return pm.filtro(timestamp,g,vincitore);
     }
 
     @Override

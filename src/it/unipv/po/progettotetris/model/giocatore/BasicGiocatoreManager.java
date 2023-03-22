@@ -29,7 +29,7 @@ public class BasicGiocatoreManager implements GiocatoreManager {
     public void addGiocatore(Giocatore g) {
         giocatori.add(g);
         try {
-            String path = GIOCATORIPATH + g.getNome() ;
+            String path = GIOCATORIPATH + g.getNome();
            // System.out.println(path);
             g.write(path);
         } catch (IOException e) {

@@ -10,9 +10,9 @@ import it.unipv.po.progettotetris.model.partita.PartitaParitaria;
 public class Main {
     public static void main(String[] args) {
         Controller c = Controller.getController();
-        c.addGiocatore(new GiocatoreBegginner("Johnny","ehdb",4));
-        c.addGiocatore(new GiocatoreBegginner("Aiman","ehdi",5));
-        c.addGiocatore(new GiocatoreProfessional("Giuseppe","npc",10));
+        //c.addGiocatore(new GiocatoreBegginner("Johnny","ehdb",4));
+       // c.addGiocatore(new GiocatoreBegginner("Aiman","ehdi",5));
+       // c.addGiocatore(new GiocatoreProfessional("Giuseppe","npc",10));
 
        // c.addPartita(new PartitaParitaria(19, c.getGiocatoreByID("ao123"), c.getGiocatoreByID("ao423"), c.getGiocatoreByID("ao423") ));
        // c.addPartita(new PartitaParitaria(19, c.getGiocatoreByID("ao423"), c.getGiocatoreByID("a0123"), c.getGiocatoreByID("ao123") ));

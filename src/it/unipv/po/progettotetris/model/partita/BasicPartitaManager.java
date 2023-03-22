@@ -50,11 +50,10 @@ public class BasicPartitaManager implements  PartitaManager{
 
 
     @Override
-    public List<Partita> filtro(Long timestamp, String g1, String g2, String vincitore) {
+    public List<Partita> filtro(Long timestamp, String g,String vincitore) {
         return  partite.stream().filter(p ->
                 (timestamp == null || p.getTimeStamp() == timestamp) //visto che timestamp è un long cioè un primitivo non posso usare null ma faccio timestamp < 0
-                && (g1 == null || p.getGiocatore1().getNome().equals(g1))
-                && (g2 == null || p.getGiocatore2().getNome().equals(g2))
+                && (g == null || p.getGiocatore1().getNome().equals(g) || p.getGiocatore2().getNome().equals(g))
                 && (vincitore == null || p.getVincitore().getNome().equals(vincitore)) )
                 .collect(Collectors.toList()); //collect per mettere tutti gli elementi in una lista
         //prendo la lista di partite, ci applico un filtro, questo filtro mi ritorna una nuova lista che non ha nulla a che fare con quella vecchia però è una lista nuova che contiene gli elementi desiderati

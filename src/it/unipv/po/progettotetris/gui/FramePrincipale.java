@@ -13,14 +13,17 @@ public class FramePrincipale extends JFrame implements Listener {
     LogInPanel loginpanel;
     GiocaPanel giocaPanel;
     MainMenu mainMenu;
+    PartitaPanel partitaPanel;
 
     public FramePrincipale(Controller controller){
         this.signUpPanel = new SignUpPanel(controller);
         this.controller = controller;
         this.loginpanel = new LogInPanel(controller);
         this.giocaPanel = new GiocaPanel(controller);
+        this.partitaPanel = new PartitaPanel(controller);
         this.mainMenu = new MainMenu(controller);
         add(mainMenu);
+
 
 
         setLayout(new GridLayout(1,1));
@@ -55,6 +58,10 @@ public class FramePrincipale extends JFrame implements Listener {
             case GIOCA_ORA :
                 setTitle("GIOCA ORA");
                 add(giocaPanel);
+                break;
+            case RICERCA_PARTITE :
+                setTitle("RICERCA PARTITE");
+                add(partitaPanel);
                 break;
 
         }
