@@ -27,18 +27,21 @@ public class MainMenu extends JPanel {
         add(login);
         add(ricercapartite);
 
+
         this.signup.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
               controller.switchTo(Pagine.SIGN_UP);
             }
         });
+
         this.login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 controller.switchTo(Pagine.LOG_IN);
             }
         });
+
         this.ricercapartite.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

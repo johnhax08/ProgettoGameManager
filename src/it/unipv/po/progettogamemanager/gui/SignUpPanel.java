@@ -42,6 +42,7 @@ public class SignUpPanel extends JPanel {
             }
         });
 
+
     }
     public String getNome(){
         return this.nome.getText();

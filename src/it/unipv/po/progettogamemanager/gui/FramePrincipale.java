@@ -31,7 +31,6 @@ public class FramePrincipale extends JFrame implements Listener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         controller.addListener(this);
-
     }
 
     @Override
