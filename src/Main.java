@@ -18,7 +18,7 @@ public class Main {
 
         new FramePrincipale(c); //creo la gui
 
-        c.switchTo(Pagine.MENU_PRINCIPALE); //serve perchè  l'app quando viene lanciata deve venire lanciata sul menu principale
+        c.switchTo(Pagine.MENU_PRINCIPALE); //  l'app quando viene lanciata deve venire lanciata sul menu principale
 
 
 

@@ -42,9 +42,12 @@ public class SignUpPanel extends JPanel {
             }
         });
 
-
     }
     public String getNome(){
+        if(controller.getGiocatoreByNome(this.nome.getText()) != null ){
+            JOptionPane.showMessageDialog(this,"IL NOME E' STATO GIA' UTILIZZATO !");
+            throw new RuntimeException("IL NOME E' STATO GIA' UTILIZZATO !");
+        }
         return this.nome.getText();
     }
 
