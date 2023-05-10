@@ -17,7 +17,7 @@ public class BasicController implements Controller {
         pm = PartitaManager.getPartitaManager();
         gm = GiocatoreManager.getGiocatoreManager();
         elencoListeners =  new ArrayList<>();
-        //paginaAttuale = Pagine.MENU_PRINCIPALE;
+
     }
 
     @Override
@@ -32,7 +32,7 @@ public class BasicController implements Controller {
     }
 
     @Override
-    public boolean authenticate(String ID, String password) {
+    public boolean authenticate(String ID, int password) {
         return gm.authenticate(ID, password);
     }
 
@@ -66,7 +66,6 @@ public class BasicController implements Controller {
     @Override
     public void switchTo(Pagine titolo) {
         this.paginaAttuale = titolo;
-        System.out.println(titolo);
         for(Listener listener : elencoListeners){
             listener.updatePagina(titolo); //notifica tutti i listener
         }

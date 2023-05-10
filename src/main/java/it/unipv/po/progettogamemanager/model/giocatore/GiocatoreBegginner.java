@@ -3,8 +3,8 @@ package it.unipv.po.progettogamemanager.model.giocatore;
 import java.util.Random;
 
 public class GiocatoreBegginner extends GiocatoreABS{
-    public GiocatoreBegginner(String nome, String password) {
-        super(nome, password,TipiGiocatore.BEGGINNER);
+    public GiocatoreBegginner(String nome, int password) {
+        super(nome, password,TipiGiocatore.BEGINNER);
     }
 
     @Override

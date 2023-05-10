@@ -16,9 +16,9 @@ public class BasicGiocatoreManager implements GiocatoreManager {
         this.giocatori = new ArrayList<>();
         for(File f : new File(GIOCATORIPATH).listFiles() ) {
             try {
-                Giocatore g = (Giocatore) Serializzabile.read(f.getPath());
+                Giocatore g = (Giocatore) Giocatore.readJson(f.getPath());
                 addGiocatore(g);
-            } catch (IOException | ClassNotFoundException | ClassCastException e) { //io exception = problema di lettura/scrittura,
+            } catch (ClassCastException e) { //io exception = problema di lettura/scrittura,
                 e.printStackTrace();
             }
         }
@@ -28,7 +28,7 @@ public class BasicGiocatoreManager implements GiocatoreManager {
     public void addGiocatore(Giocatore g) {
         giocatori.add(g); //il giocatore lo aggiungo alla lista
         try {
-            String path = GIOCATORIPATH + g.getNome();
+            String path = GIOCATORIPATH + g.getNome() + ".json";
             g.write(path); //sto dicendo al giocatore di salvarsi su questo path
         } catch (IOException e) {
             e.printStackTrace();
@@ -43,9 +43,9 @@ public class BasicGiocatoreManager implements GiocatoreManager {
     }
 
     @Override
-    public boolean authenticate(String nome, String password) {
+    public boolean authenticate(String nome, int password) {
         Giocatore g = getGiocatoreByNome(nome);
-        return g!=null && g.getPassword().equals(password); //prima di tutto controllo se il giocatore è null, se non è null controllo la password
+        return g!=null && g.getPassword() == (password); //prima di tutto controllo se il giocatore è null, se non è null controllo la password
     }
 
     @Override

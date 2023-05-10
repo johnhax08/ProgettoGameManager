@@ -3,7 +3,7 @@ package it.unipv.po.progettogamemanager.model.giocatore;
 public interface GiocatoreManager {
     public void addGiocatore(Giocatore g);
     public void removeGiocatore(Giocatore g);
-    public boolean authenticate(String nome, String password);
+    public boolean authenticate(String nome, int password);
 
     public Giocatore getGiocatoreByNome(String nome);
 

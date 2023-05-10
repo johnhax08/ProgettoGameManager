@@ -4,6 +4,7 @@ import it.unipv.po.progettogamemanager.model.facade.Controller;
 import it.unipv.po.progettogamemanager.model.facade.Pagine;
 import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
 import it.unipv.po.progettogamemanager.model.giocatore.TipiGiocatore;
+import it.unipv.po.progettogamemanager.model.utils.Hash;
 
 import javax.swing.*;
 import java.awt.*;
@@ -51,12 +52,12 @@ public class SignUpPanel extends JPanel {
         return this.nome.getText();
     }
 
-    public String getPassword(){
+    public int getPassword(){
         if( !password.getText().equals(passwordconf.getText())){
             JOptionPane.showMessageDialog(this,"LE PASSWORD NON CORRISPONDONO!");
             throw new RuntimeException("LE PASSWORD NON CORRISPONDONO!");
         }
-        return password.getText();
+        return Hash.hash(password.getText());
     }
 
 

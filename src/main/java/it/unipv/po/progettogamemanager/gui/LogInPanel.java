@@ -2,6 +2,7 @@ package it.unipv.po.progettogamemanager.gui;
 
 import it.unipv.po.progettogamemanager.model.facade.Controller;
 import it.unipv.po.progettogamemanager.model.facade.Pagine;
+import it.unipv.po.progettogamemanager.model.utils.Hash;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +31,7 @@ public class LogInPanel extends JPanel {
         this.login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(controller.authenticate(username.getText(), password.getText())){
+                if(controller.authenticate(username.getText(), Hash.hash(password.getText()))){
                     JOptionPane.showMessageDialog(null,"Log In è stato effettuato con successo!");
                     controller.setGiocatoreAttuale(username.getText());
                     controller.switchTo(Pagine.GIOCA_ORA);

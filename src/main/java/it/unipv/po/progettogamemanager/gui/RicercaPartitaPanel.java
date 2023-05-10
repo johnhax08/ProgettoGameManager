@@ -17,17 +17,6 @@ public class RicercaPartitaPanel extends JPanel {
     JTextArea vincitore;
 
 
-    protected void filtraPartita(){
-        var g = giocatore.getText();
-        var v =  vincitore.getText();
-        var list = controller.filtro(null, g.isBlank()?null : g,v.isBlank()?null : v);
-
-        listModel.removeAllElements();
-        for (int x = 0;x < list.size(); x++){
-            listModel.add(x,list.get(x).getID());
-        }
-    }
-
     public RicercaPartitaPanel(Controller controller){
         this.controller = controller;
         this.lista = new JList();
@@ -76,6 +65,16 @@ public class RicercaPartitaPanel extends JPanel {
         });
 
 
+    }
+    protected void filtraPartita(){
+        var g = giocatore.getText();
+        var v =  vincitore.getText();
+        var list = controller.filtro(null, g.isBlank()?null : g,v.isBlank()?null : v);
+
+        listModel.removeAllElements();
+        for (int x = 0;x < list.size(); x++){
+            listModel.add(x,list.get(x).getID());
+        }
     }
 }
 
