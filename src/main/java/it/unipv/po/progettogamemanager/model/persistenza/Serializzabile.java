@@ -4,8 +4,5 @@ import java.io.*;
 
 public interface Serializzabile {
 
-    default void write(String filename) throws IOException {
-        ObjectOutputStream f = new ObjectOutputStream(new FileOutputStream(filename));
-        f.writeObject(this);
-    }
+     void write(String filename) throws IOException ; //serializza un oggetto serializzabile cioè lo salva su disco
 }

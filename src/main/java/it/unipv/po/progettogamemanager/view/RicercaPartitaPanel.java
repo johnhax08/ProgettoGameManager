@@ -20,12 +20,14 @@ public class RicercaPartitaPanel extends JPanel {
         this.lista = new JList();
         this.listModel = new DefaultListModel();
         lista.setModel(listModel);
-        this.giocatore = new JTextArea("INSERISCI NOME GIOCATORE");
-        this.vincitore = new JTextArea("INSERISCI NOME VINCITORE");
+        this.giocatore = new JTextArea();
+        this.vincitore = new JTextArea();
 
-        setLayout(new GridLayout(4,1));
+        setLayout(new GridLayout(6,1));
         add(new JScrollPane(lista)); //aggiungo la scroll bar alla lista
+        add(new JLabel("Inserisci nome giocatore:"));
         add(giocatore);
+        add(new JLabel("Inserisci nome vincitore:"));
         add(vincitore);
 
         giocatore.getDocument().addDocumentListener(new DocumentListener() {
@@ -38,6 +40,7 @@ public class RicercaPartitaPanel extends JPanel {
 
             @Override
             public void removeUpdate(DocumentEvent e) {
+                filtraPartita();
             }
 
             @Override
@@ -53,6 +56,7 @@ public class RicercaPartitaPanel extends JPanel {
 
             @Override
             public void removeUpdate(DocumentEvent e) {
+                filtraPartita();
 
             }
 
@@ -61,6 +65,7 @@ public class RicercaPartitaPanel extends JPanel {
 
             }
         });
+        filtraPartita();
 
 
     }

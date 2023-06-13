@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="revisione">
+    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="prettyPrint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/partita/PartitaABS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/partita/PartitaABS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/persistenza/Serializzabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/persistenza/Serializzabile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/RicercaPartitaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/RicercaPartitaPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686643472522</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="prettyPrint">
+      <created>1686646350612</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686646350612</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -154,6 +160,7 @@
     <MESSAGE value="ultime modifiche" />
     <MESSAGE value="pop-up nome duplicato" />
     <MESSAGE value="revisione" />
-    <option name="LAST_COMMIT_MESSAGE" value="revisione" />
+    <MESSAGE value="prettyPrint" />
+    <option name="LAST_COMMIT_MESSAGE" value="prettyPrint" />
   </component>
 </project>
