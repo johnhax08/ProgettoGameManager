@@ -71,7 +71,7 @@ public class RicercaPartitaPanel extends JPanel {
 
         listModel.removeAllElements();
         for (int x = 0;x < list.size(); x++){
-            listModel.add(x,list.get(x).getID());
+            listModel.add(x,list.get(x).prettyPrint());
         }
     }
 }

@@ -4,6 +4,8 @@ import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
 import it.unipv.po.progettogamemanager.model.utils.Files;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public abstract class PartitaABS implements Partita {
     final protected long timeStamp;
@@ -40,6 +42,8 @@ public abstract class PartitaABS implements Partita {
         return vincitore;
     }
 
+    public String getPerdente(){ return giocatore1.equals(vincitore) ? giocatore2 : giocatore1;}
+
     @Override
     public TipoPartita getTipo() {
         return tipo;
@@ -50,7 +54,11 @@ public abstract class PartitaABS implements Partita {
         return timeStamp + giocatore1 + giocatore2 + vincitore ;
     }
 
-
+    public String prettyPrint(){
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+        String data = sdf.format(new Date(timeStamp));
+        return "data: "+data+" vincitore: "+getVincitore()+" perdente: "+getPerdente() ;
+    }
     public String toJson() {
         return
                 "{ \n"  +

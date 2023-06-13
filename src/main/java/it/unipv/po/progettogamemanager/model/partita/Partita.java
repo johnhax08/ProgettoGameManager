@@ -14,6 +14,7 @@ public interface Partita extends Serializzabile{
     String getVincitore();
     String getID();
     TipoPartita getTipo();
+    String prettyPrint();
 
     static Partita getPartita(long timestamp,Giocatore vincitore,Giocatore perdente){
         if (vincitore.getTipo() != perdente.getTipo()){
