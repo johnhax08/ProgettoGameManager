@@ -1,7 +1,7 @@
-import it.unipv.po.progettogamemanager.gui.FramePrincipale;
+import it.unipv.po.progettogamemanager.view.FramePrincipale;
 
-import it.unipv.po.progettogamemanager.model.facade.Controller;
-import it.unipv.po.progettogamemanager.model.facade.Pagine;
+import it.unipv.po.progettogamemanager.controller.Controller;
+import it.unipv.po.progettogamemanager.controller.Pagine;
 
 
 public class Main {

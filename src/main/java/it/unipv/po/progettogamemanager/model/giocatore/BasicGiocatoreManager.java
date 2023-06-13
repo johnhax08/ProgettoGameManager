@@ -16,7 +16,7 @@ public class BasicGiocatoreManager implements GiocatoreManager {
         this.giocatori = new ArrayList<>();
         for(File f : new File(GIOCATORIPATH).listFiles() ) {
             try {
-                Giocatore g = (Giocatore) Giocatore.readJson(f.getPath());
+                Giocatore g = Giocatore.readJson(f.getPath());
                 addGiocatore(g);
             } catch (ClassCastException e) { //io exception = problema di lettura/scrittura,
                 e.printStackTrace();
@@ -45,7 +45,7 @@ public class BasicGiocatoreManager implements GiocatoreManager {
     @Override
     public boolean authenticate(String nome, int password) {
         Giocatore g = getGiocatoreByNome(nome);
-        return g!=null && g.getPassword() == (password); //prima di tutto controllo se il giocatore è null, se non è null controllo la password
+        return g!=null && g.getPassword() == password; //prima di tutto controllo se il giocatore è null, se non è null controllo la password
     }
 
     @Override

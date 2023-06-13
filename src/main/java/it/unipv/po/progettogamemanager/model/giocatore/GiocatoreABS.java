@@ -6,9 +6,9 @@ import java.io.IOException;
 
 //in questa classe metto tutta la roba in comune cioè in giocatoreABS.
 public abstract class GiocatoreABS implements Giocatore {
-    String nome;
-    int password;
-    TipiGiocatore tipo;
+    final String nome;
+    final int password;
+    final TipiGiocatore tipo;
 
     public GiocatoreABS(String nome, int password, TipiGiocatore tipo) {
         this.nome = nome;

@@ -1,7 +1,7 @@
-package it.unipv.po.progettogamemanager.gui;
+package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.model.facade.Controller;
-import it.unipv.po.progettogamemanager.model.facade.Pagine;
+import it.unipv.po.progettogamemanager.controller.Controller;
+import it.unipv.po.progettogamemanager.controller.Pagine;
 import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
 import it.unipv.po.progettogamemanager.model.giocatore.TipiGiocatore;
 import it.unipv.po.progettogamemanager.model.utils.Hash;
@@ -28,11 +28,22 @@ public class SignUpPanel extends JPanel {
         this.menutendina =  new JComboBox<>(TipiGiocatore.values());
         this.controller = controller;
 
-        setLayout(new GridLayout(5,1));
+        setLayout(new GridLayout(8,1));
+        add(new ColourLabel("username",Color.ORANGE));
         add(nome);
+        add(new ColourLabel("password",Color.ORANGE));
         add(password);
+        add(new ColourLabel("conferma password",Color.ORANGE));
         add(passwordconf);
         add(menutendina);
+
+        /*signmeup.setOpaque(true);
+        signmeup.setContentAreaFilled(true);
+        signmeup.setBorderPainted(false);
+        signmeup.setFocusPainted(false);
+        signmeup.setBackground(Color.white);
+        signmeup.setForeground(Color.black);*/
+
         add(signmeup);
 
         this.signmeup.addActionListener(new ActionListener() {

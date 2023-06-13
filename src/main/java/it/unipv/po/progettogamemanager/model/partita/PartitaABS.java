@@ -1,15 +1,18 @@
 package it.unipv.po.progettogamemanager.model.partita;
 
 import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
+import it.unipv.po.progettogamemanager.model.utils.Files;
+
+import java.io.IOException;
 
 public abstract class PartitaABS implements Partita {
     final protected long timeStamp;
-    final protected Giocatore giocatore1;
-    final protected Giocatore giocatore2;
-    final protected Giocatore vincitore;
+    final protected String giocatore1;
+    final protected String giocatore2;
+    final protected String vincitore;
     final protected TipoPartita tipo;
 
-    public PartitaABS(long timeStamp, Giocatore giocatore1, Giocatore giocatore2, Giocatore vincitore, TipoPartita tipo) {
+    public PartitaABS(long timeStamp, String giocatore1, String giocatore2, String vincitore, TipoPartita tipo) {
         this.timeStamp = timeStamp;
         this.giocatore1 = giocatore1;
         this.giocatore2 = giocatore2;
@@ -23,17 +26,17 @@ public abstract class PartitaABS implements Partita {
     }
 
     @Override
-    public Giocatore getGiocatore1() {
+    public String getGiocatore1() {
         return giocatore1;
     }
 
     @Override
-    public Giocatore getGiocatore2() {
+    public String getGiocatore2() {
         return giocatore2;
     }
 
     @Override
-    public Giocatore getVincitore() {
+    public String getVincitore() {
         return vincitore;
     }
 
@@ -44,7 +47,26 @@ public abstract class PartitaABS implements Partita {
 
     @Override
     public String getID() {
-        return timeStamp + giocatore1.getNome() + giocatore2.getNome() + vincitore.getNome();
+        return timeStamp + giocatore1 + giocatore2 + vincitore ;
+    }
+
+
+    public String toJson() {
+        return
+                "{ \n"  +
+                         "\"timestamp\" : " + this.timeStamp + ",\n" +
+                         "\"giocatore1\" : \"" +  this.giocatore1 + "\", \n" +
+                         "\"giocatore2\" : \"" +  this.giocatore2 + "\", \n" +
+                         "\"vincitore\" : \"" +  this.vincitore + "\", \n" +
+                         "\"tipo\" : \"" +  this.tipo + "\", \n" +
+
+
+                "}" ;
+    }
+
+    @Override
+    public void write(String filename) throws IOException {
+        Files.write(filename,toJson());
     }
 
     @Override

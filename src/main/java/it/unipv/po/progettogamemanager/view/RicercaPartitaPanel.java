@@ -1,13 +1,11 @@
-package it.unipv.po.progettogamemanager.gui;
+package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.model.facade.Controller;
-import it.unipv.po.progettogamemanager.model.partita.Partita;
+import it.unipv.po.progettogamemanager.controller.Controller;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.util.List;
 
 public class RicercaPartitaPanel extends JPanel {
     JList lista;

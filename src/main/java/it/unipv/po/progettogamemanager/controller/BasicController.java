@@ -1,4 +1,4 @@
-package it.unipv.po.progettogamemanager.model.facade;
+package it.unipv.po.progettogamemanager.controller;
 import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
 import it.unipv.po.progettogamemanager.model.giocatore.GiocatoreManager;
 import it.unipv.po.progettogamemanager.model.partita.Partita;

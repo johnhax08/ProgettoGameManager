@@ -1,15 +1,13 @@
-package it.unipv.po.progettogamemanager.gui;
+package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.model.facade.Controller;
+import it.unipv.po.progettogamemanager.controller.Controller;
 import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
 import it.unipv.po.progettogamemanager.model.partita.Partita;
-import it.unipv.po.progettogamemanager.model.partita.PartitaParitaria;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 public class GiocaPanel extends JPanel {
     JTextArea nome;
@@ -35,6 +33,12 @@ public class GiocaPanel extends JPanel {
                 Giocatore p = v==g1? g2 : g1; //se v=g1, il perdente è g2 altrimenti è g1
 
                 controller.addPartita(Partita.getPartita(System.currentTimeMillis(),v,p));
+                if(g1.equals(v)){
+                    JOptionPane.showMessageDialog(null, "hai vinto!");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "hai perso!");
+                }
             }
         });
     }

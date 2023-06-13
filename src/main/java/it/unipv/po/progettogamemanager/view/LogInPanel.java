@@ -1,7 +1,7 @@
-package it.unipv.po.progettogamemanager.gui;
+package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.model.facade.Controller;
-import it.unipv.po.progettogamemanager.model.facade.Pagine;
+import it.unipv.po.progettogamemanager.controller.Controller;
+import it.unipv.po.progettogamemanager.controller.Pagine;
 import it.unipv.po.progettogamemanager.model.utils.Hash;
 
 import javax.swing.*;
@@ -21,8 +21,11 @@ public class LogInPanel extends JPanel {
         this.controller = controller;
         this.login = new JButton("Log In");
 
-        setLayout(new GridLayout(3,1));
+
+        setLayout(new GridLayout(5,1));
+        add(new JLabel("username : +"));
         add(username);
+        add(new JLabel("password : "));
         add(password);
         add(login);
 

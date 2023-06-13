@@ -11,6 +11,14 @@ public interface Giocatore extends Serializzabile {
     int getPassword();
     TipiGiocatore getTipo();
 
+
+    /**
+     * g1.vince(g2) se è true vuol dire che ha vinto g1
+     *
+     * */
+    public boolean vince(Giocatore g);
+
+
     public static Giocatore getGiocatore(String nome, int password, TipiGiocatore tipo){
         switch (tipo){
             case BEGINNER:
@@ -33,16 +41,12 @@ public interface Giocatore extends Serializzabile {
 
 
         JSONObject jo = new JSONObject(json);
-        System.out.println(jo);
         var nome = jo.get("nome").toString();
-        System.out.println(nome);
         var password = Integer.parseInt(jo.get("password").toString()) ;
-        System.out.println(password);
-        System.out.println(jo.get("tipo").toString());
         switch (jo.get("tipo").toString()){
 
             case "BEGINNER" :
-                //System.out.println("begginner");
+
                 return new GiocatoreBegginner(nome, password);
 
             case "PROFESSIONAL" :
@@ -54,14 +58,5 @@ public interface Giocatore extends Serializzabile {
 
 
     }
-
-    /**
-     * g1.vince(g2) se è true vuol dire che ha vinto g1
-     *
-     * */
-    public boolean vince(Giocatore g);
-
-
-
 
 }
