@@ -23,7 +23,7 @@ public class LogInPanel extends JPanel {
 
 
         setLayout(new GridLayout(5,1));
-        add(new JLabel("username : +"));
+        add(new JLabel("username : "));
         add(username);
         add(new JLabel("password : "));
         add(password);
