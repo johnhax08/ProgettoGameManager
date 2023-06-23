@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="prettyPrint">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/it/unipv/po/progettogamemanager/model/giocatore/GiocatoreABSTest.java" afterDir="false" />
+    <list default="true" id="f8f4a73c-ba13-43e0-a26d-1d125b565613" name="Changes" comment="UnitTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/unipv/po/progettogamemanager/model/giocatore/BasicGiocatoreManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProgettoTetris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProgettoTetris.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/controller/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/gamemanager/BasicGameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/gamemanager/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/controller/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/gamemanager/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/controller/Pagine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/model/gamemanager/Pagine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/FramePrincipale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/FramePrincipale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/GiocaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/GiocaPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/LogInPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/LogInPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/RicercaPartitaPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/RicercaPartitaPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/SignUpPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unipv/po/progettogamemanager/view/SignUpPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/unipv/po/progettogamemanager/model/giocatore/GiocatoreABSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/unipv/po/progettogamemanager/model/giocatore/GiocatoreABSTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +52,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "project.structure.last.edited": "Modules",
@@ -159,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686646350612</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="UnitTest">
+      <created>1687342107540</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1687342107540</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,6 +190,7 @@
     <MESSAGE value="pop-up nome duplicato" />
     <MESSAGE value="revisione" />
     <MESSAGE value="prettyPrint" />
-    <option name="LAST_COMMIT_MESSAGE" value="prettyPrint" />
+    <MESSAGE value="UnitTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="UnitTest" />
   </component>
 </project>

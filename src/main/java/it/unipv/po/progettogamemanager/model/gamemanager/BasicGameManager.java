@@ -1,4 +1,4 @@
-package it.unipv.po.progettogamemanager.controller;
+package it.unipv.po.progettogamemanager.model.gamemanager;
 import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
 import it.unipv.po.progettogamemanager.model.giocatore.GiocatoreManager;
 import it.unipv.po.progettogamemanager.model.partita.Partita;
@@ -6,14 +6,14 @@ import it.unipv.po.progettogamemanager.model.partita.PartitaManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasicController implements Controller {
+public class BasicGameManager implements GameManager {
     protected PartitaManager pm;
     protected GiocatoreManager gm;
     protected List <Listener> elencoListeners;
     protected Pagine paginaAttuale; //non viene inizializzata perchè all'inizio è null.
 
 
-    public BasicController() {
+    public BasicGameManager() {
         pm = PartitaManager.getPartitaManager();
         gm = GiocatoreManager.getGiocatoreManager();
         elencoListeners =  new ArrayList<>();

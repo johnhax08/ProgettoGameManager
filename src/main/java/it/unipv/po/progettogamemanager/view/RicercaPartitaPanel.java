@@ -1,6 +1,6 @@
 package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.controller.Controller;
+import it.unipv.po.progettogamemanager.model.gamemanager.GameManager;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -9,14 +9,14 @@ import java.awt.*;
 
 public class RicercaPartitaPanel extends JPanel {
     JList lista;
-    Controller controller;
+    GameManager gameManager;
     DefaultListModel listModel;
     JTextArea giocatore;
     JTextArea vincitore;
 
 
-    public RicercaPartitaPanel(Controller controller){
-        this.controller = controller;
+    public RicercaPartitaPanel(GameManager gameManager){
+        this.gameManager = gameManager;
         this.lista = new JList();
         this.listModel = new DefaultListModel();
         lista.setModel(listModel);
@@ -72,7 +72,7 @@ public class RicercaPartitaPanel extends JPanel {
     protected void filtraPartita(){
         var g = giocatore.getText();
         var v =  vincitore.getText();
-        var list = controller.filtro(null, g.isBlank()?null : g,v.isBlank()?null : v);
+        var list = gameManager.filtro(null, g.isBlank()?null : g,v.isBlank()?null : v);
 
         listModel.removeAllElements();
         for (int x = 0;x < list.size(); x++){

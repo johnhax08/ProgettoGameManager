@@ -1,10 +1,10 @@
-package it.unipv.po.progettogamemanager.controller;
+package it.unipv.po.progettogamemanager.model.gamemanager;
 import it.unipv.po.progettogamemanager.model.giocatore.GiocatoreManager;
 import it.unipv.po.progettogamemanager.model.partita.PartitaManager;
 
-public interface Controller extends GiocatoreManager, PartitaManager {
-     static Controller getController(){
-        return new BasicController();
+public interface GameManager extends GiocatoreManager, PartitaManager {
+     static GameManager getGameManager(){
+        return new BasicGameManager();
     }
     void addListener(Listener listener);
 

@@ -1,7 +1,7 @@
 package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.controller.Controller;
-import it.unipv.po.progettogamemanager.controller.Pagine;
+import it.unipv.po.progettogamemanager.model.gamemanager.GameManager;
+import it.unipv.po.progettogamemanager.model.gamemanager.Pagine;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +14,7 @@ public class MainMenu extends JPanel {
     JButton ricercapartite;
     JLabel benvenuto;
 
-    public MainMenu(Controller controller){
+    public MainMenu(GameManager gameManager){
         this.signup = new JButton("SIGN UP");
         this.login = new JButton("LOG IN");
         this.ricercapartite = new JButton("RICERCA PARTITE");
@@ -31,21 +31,21 @@ public class MainMenu extends JPanel {
         this.signup.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              controller.switchTo(Pagine.SIGN_UP);
+              gameManager.switchTo(Pagine.SIGN_UP);
             }
         });
 
         this.login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.switchTo(Pagine.LOG_IN);
+                gameManager.switchTo(Pagine.LOG_IN);
             }
         });
 
         this.ricercapartite.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.switchTo(Pagine.RICERCA_PARTITE);
+                gameManager.switchTo(Pagine.RICERCA_PARTITE);
             }
         });
     }

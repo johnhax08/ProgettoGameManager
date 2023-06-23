@@ -1,12 +1,12 @@
 import it.unipv.po.progettogamemanager.view.FramePrincipale;
 
-import it.unipv.po.progettogamemanager.controller.Controller;
-import it.unipv.po.progettogamemanager.controller.Pagine;
+import it.unipv.po.progettogamemanager.model.gamemanager.GameManager;
+import it.unipv.po.progettogamemanager.model.gamemanager.Pagine;
 
 
 public class Main {
     public static void main(String[] args) {
-        Controller c = Controller.getController(); //creo il modello
+        GameManager c = GameManager.getGameManager(); //creo il modello
 
         new FramePrincipale(c); //creo la gui
 

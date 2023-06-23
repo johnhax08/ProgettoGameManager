@@ -1,28 +1,28 @@
 package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.controller.Controller;
-import it.unipv.po.progettogamemanager.controller.Listener;
-import it.unipv.po.progettogamemanager.controller.Pagine;
+import it.unipv.po.progettogamemanager.model.gamemanager.GameManager;
+import it.unipv.po.progettogamemanager.model.gamemanager.Listener;
+import it.unipv.po.progettogamemanager.model.gamemanager.Pagine;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class FramePrincipale extends JFrame implements Listener {
     SignUpPanel signUpPanel;
-    Controller controller;
+    GameManager gameManager;
     LogInPanel loginpanel;
     GiocaPanel giocaPanel;
     MainMenu mainMenu;
     RicercaPartitaPanel partitaPanel;
 
 
-    public FramePrincipale(Controller controller){
-        this.signUpPanel = new SignUpPanel(controller);
-        this.controller = controller;
-        this.loginpanel = new LogInPanel(controller);
-        this.giocaPanel = new GiocaPanel(controller);
-        this.partitaPanel = new RicercaPartitaPanel(controller);
-        this.mainMenu = new MainMenu(controller);
+    public FramePrincipale(GameManager gameManager){
+        this.signUpPanel = new SignUpPanel(gameManager);
+        this.gameManager = gameManager;
+        this.loginpanel = new LogInPanel(gameManager);
+        this.giocaPanel = new GiocaPanel(gameManager);
+        this.partitaPanel = new RicercaPartitaPanel(gameManager);
+        this.mainMenu = new MainMenu(gameManager);
 
 
         setLayout(new GridLayout(1,1));
@@ -30,7 +30,7 @@ public class FramePrincipale extends JFrame implements Listener {
         setLocationRelativeTo(null);//centrare la finestra sullo schermo
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        controller.addListener(this);
+        gameManager.addListener(this);
     }
 
     @Override

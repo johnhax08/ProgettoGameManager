@@ -1,7 +1,7 @@
 package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.controller.Controller;
-import it.unipv.po.progettogamemanager.controller.Pagine;
+import it.unipv.po.progettogamemanager.model.gamemanager.GameManager;
+import it.unipv.po.progettogamemanager.model.gamemanager.Pagine;
 import it.unipv.po.progettogamemanager.model.utils.Hash;
 
 import javax.swing.*;
@@ -12,13 +12,13 @@ import java.awt.event.ActionListener;
 public class LogInPanel extends JPanel {
     JTextArea username;
     JPasswordField password;
-    Controller controller;
+    GameManager gameManager;
     JButton login;
 
-    public LogInPanel(Controller controller){
+    public LogInPanel(GameManager gameManager){
         this.username = new JTextArea();
         this.password = new JPasswordField();
-        this.controller = controller;
+        this.gameManager = gameManager;
         this.login = new JButton("Log In");
 
 
@@ -34,10 +34,10 @@ public class LogInPanel extends JPanel {
         this.login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(controller.authenticate(username.getText(), Hash.hash(password.getText()))){
+                if(gameManager.authenticate(username.getText(), Hash.hash(password.getText()))){
                     JOptionPane.showMessageDialog(null,"Log In è stato effettuato con successo!");
-                    controller.setGiocatoreAttuale(username.getText());
-                    controller.switchTo(Pagine.GIOCA_ORA);
+                    gameManager.setGiocatoreAttuale(username.getText());
+                    gameManager.switchTo(Pagine.GIOCA_ORA);
                 }
                 else{
                     JOptionPane.showMessageDialog(null,"Log In non riuscito!");

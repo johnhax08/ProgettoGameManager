@@ -1,6 +1,6 @@
 package it.unipv.po.progettogamemanager.view;
 
-import it.unipv.po.progettogamemanager.controller.Controller;
+import it.unipv.po.progettogamemanager.model.gamemanager.GameManager;
 import it.unipv.po.progettogamemanager.model.giocatore.Giocatore;
 import it.unipv.po.progettogamemanager.model.partita.Partita;
 
@@ -12,12 +12,12 @@ import java.awt.event.ActionListener;
 public class GiocaPanel extends JPanel {
     JTextArea nome;
     JButton sfida;
-    Controller controller;
+    GameManager gameManager;
 
-    public GiocaPanel(Controller controller){
+    public GiocaPanel(GameManager gameManager){
         this.nome = new JTextArea();
         this.sfida = new JButton("SFIDA!");
-        this.controller = controller;
+        this.gameManager = gameManager;
 
         setLayout(new GridLayout(2,1));
         add(nome);
@@ -26,13 +26,13 @@ public class GiocaPanel extends JPanel {
         this.sfida.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Giocatore g1 = controller.getGiocatoreAttuale();
-                Giocatore g2 = controller.getGiocatoreByNome(nome.getText());
+                Giocatore g1 = gameManager.getGiocatoreAttuale();
+                Giocatore g2 = gameManager.getGiocatoreByNome(nome.getText());
                 Giocatore v = g1.vince(g2)?g1 : g2;  // : = sennò , ? operatore ternario ed è praticamente un if else su un'unica riga
                 //g1.vince(g2) mi dovrebbe tornare true o false , il ? sta per : se questa cosa è vera vince g1 se non è vera vince g2
                 Giocatore p = v==g1? g2 : g1; //se v=g1, il perdente è g2 altrimenti è g1
 
-                controller.addPartita(Partita.getPartita(System.currentTimeMillis(),v,p));
+                gameManager.addPartita(Partita.getPartita(System.currentTimeMillis(),v,p));
                 if(g1.equals(v)){
                     JOptionPane.showMessageDialog(null, "hai vinto!");
                 }

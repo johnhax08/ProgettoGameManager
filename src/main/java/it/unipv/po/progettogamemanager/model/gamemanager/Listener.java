@@ -1,4 +1,4 @@
-package it.unipv.po.progettogamemanager.controller;
+package it.unipv.po.progettogamemanager.model.gamemanager;
 
 public interface Listener {
 
